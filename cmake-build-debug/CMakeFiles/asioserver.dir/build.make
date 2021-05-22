@@ -62,10 +62,10 @@ RM = /snap/clion/151/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/glasser/toys/asioserver
+CMAKE_SOURCE_DIR = /home/glasser/toys/asio-server
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/glasser/toys/asioserver/cmake-build-debug
+CMAKE_BINARY_DIR = /home/glasser/toys/asio-server/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/asioserver.dir/depend.make
@@ -78,94 +78,94 @@ include CMakeFiles/asioserver.dir/flags.make
 
 CMakeFiles/asioserver.dir/CppServer/core/app.cpp.o: CMakeFiles/asioserver.dir/flags.make
 CMakeFiles/asioserver.dir/CppServer/core/app.cpp.o: ../CppServer/core/app.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/asioserver.dir/CppServer/core/app.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/core/app.cpp.o -c /home/glasser/toys/asioserver/CppServer/core/app.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/asioserver.dir/CppServer/core/app.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/core/app.cpp.o -c /home/glasser/toys/asio-server/CppServer/core/app.cpp
 
 CMakeFiles/asioserver.dir/CppServer/core/app.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/asioserver.dir/CppServer/core/app.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asioserver/CppServer/core/app.cpp > CMakeFiles/asioserver.dir/CppServer/core/app.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asio-server/CppServer/core/app.cpp > CMakeFiles/asioserver.dir/CppServer/core/app.cpp.i
 
 CMakeFiles/asioserver.dir/CppServer/core/app.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/asioserver.dir/CppServer/core/app.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asioserver/CppServer/core/app.cpp -o CMakeFiles/asioserver.dir/CppServer/core/app.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asio-server/CppServer/core/app.cpp -o CMakeFiles/asioserver.dir/CppServer/core/app.cpp.s
 
 CMakeFiles/asioserver.dir/CppServer/core/math.cpp.o: CMakeFiles/asioserver.dir/flags.make
 CMakeFiles/asioserver.dir/CppServer/core/math.cpp.o: ../CppServer/core/math.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/asioserver.dir/CppServer/core/math.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/core/math.cpp.o -c /home/glasser/toys/asioserver/CppServer/core/math.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/asioserver.dir/CppServer/core/math.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/core/math.cpp.o -c /home/glasser/toys/asio-server/CppServer/core/math.cpp
 
 CMakeFiles/asioserver.dir/CppServer/core/math.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/asioserver.dir/CppServer/core/math.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asioserver/CppServer/core/math.cpp > CMakeFiles/asioserver.dir/CppServer/core/math.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asio-server/CppServer/core/math.cpp > CMakeFiles/asioserver.dir/CppServer/core/math.cpp.i
 
 CMakeFiles/asioserver.dir/CppServer/core/math.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/asioserver.dir/CppServer/core/math.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asioserver/CppServer/core/math.cpp -o CMakeFiles/asioserver.dir/CppServer/core/math.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asio-server/CppServer/core/math.cpp -o CMakeFiles/asioserver.dir/CppServer/core/math.cpp.s
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.o: CMakeFiles/asioserver.dir/flags.make
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.o: ../CppServer/servers/http_server/connection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.o -c /home/glasser/toys/asioserver/CppServer/servers/http_server/connection.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.o -c /home/glasser/toys/asio-server/CppServer/servers/http_server/connection.cpp
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asioserver/CppServer/servers/http_server/connection.cpp > CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asio-server/CppServer/servers/http_server/connection.cpp > CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.i
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asioserver/CppServer/servers/http_server/connection.cpp -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asio-server/CppServer/servers/http_server/connection.cpp -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.s
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.o: CMakeFiles/asioserver.dir/flags.make
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.o: ../CppServer/servers/http_server/response.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.o -c /home/glasser/toys/asioserver/CppServer/servers/http_server/response.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.o -c /home/glasser/toys/asio-server/CppServer/servers/http_server/response.cpp
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asioserver/CppServer/servers/http_server/response.cpp > CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asio-server/CppServer/servers/http_server/response.cpp > CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.i
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asioserver/CppServer/servers/http_server/response.cpp -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asio-server/CppServer/servers/http_server/response.cpp -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.s
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.o: CMakeFiles/asioserver.dir/flags.make
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.o: ../CppServer/servers/http_server/request.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.o -c /home/glasser/toys/asioserver/CppServer/servers/http_server/request.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.o -c /home/glasser/toys/asio-server/CppServer/servers/http_server/request.cpp
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asioserver/CppServer/servers/http_server/request.cpp > CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asio-server/CppServer/servers/http_server/request.cpp > CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.i
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asioserver/CppServer/servers/http_server/request.cpp -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asio-server/CppServer/servers/http_server/request.cpp -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.s
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.o: CMakeFiles/asioserver.dir/flags.make
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.o: ../CppServer/servers/http_server/http_server.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.o -c /home/glasser/toys/asioserver/CppServer/servers/http_server/http_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.o -c /home/glasser/toys/asio-server/CppServer/servers/http_server/http_server.cpp
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asioserver/CppServer/servers/http_server/http_server.cpp > CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asio-server/CppServer/servers/http_server/http_server.cpp > CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.i
 
 CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asioserver/CppServer/servers/http_server/http_server.cpp -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asio-server/CppServer/servers/http_server/http_server.cpp -o CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.s
 
 CMakeFiles/asioserver.dir/main.cpp.o: CMakeFiles/asioserver.dir/flags.make
 CMakeFiles/asioserver.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/asioserver.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/main.cpp.o -c /home/glasser/toys/asioserver/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/asioserver.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asioserver.dir/main.cpp.o -c /home/glasser/toys/asio-server/main.cpp
 
 CMakeFiles/asioserver.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/asioserver.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asioserver/main.cpp > CMakeFiles/asioserver.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/glasser/toys/asio-server/main.cpp > CMakeFiles/asioserver.dir/main.cpp.i
 
 CMakeFiles/asioserver.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/asioserver.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asioserver/main.cpp -o CMakeFiles/asioserver.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/glasser/toys/asio-server/main.cpp -o CMakeFiles/asioserver.dir/main.cpp.s
 
 # Object files for target asioserver
 asioserver_OBJECTS = \
@@ -191,7 +191,7 @@ asioserver: CMakeFiles/asioserver.dir/build.make
 asioserver: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 asioserver: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
 asioserver: CMakeFiles/asioserver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable asioserver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable asioserver"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/asioserver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -204,6 +204,6 @@ CMakeFiles/asioserver.dir/clean:
 .PHONY : CMakeFiles/asioserver.dir/clean
 
 CMakeFiles/asioserver.dir/depend:
-	cd /home/glasser/toys/asioserver/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/glasser/toys/asioserver /home/glasser/toys/asioserver /home/glasser/toys/asioserver/cmake-build-debug /home/glasser/toys/asioserver/cmake-build-debug /home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/asioserver.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/glasser/toys/asio-server/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/glasser/toys/asio-server /home/glasser/toys/asio-server /home/glasser/toys/asio-server/cmake-build-debug /home/glasser/toys/asio-server/cmake-build-debug /home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles/asioserver.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/asioserver.dir/depend
 

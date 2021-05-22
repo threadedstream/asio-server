@@ -50,7 +50,6 @@ void connection::start_processing()
 	Logger::log(SEVERITY::DEBUG, "Attempt to initialize database connection\n");
 	
 	auto self(shared_from_this());
-	//load_file(FILENAME);
 	socket_.async_read_some(buffer(buffer_), [&, self](const errc& err, size_t length) {
 		if (!err)
 		{

@@ -13,8 +13,10 @@ namespace valid_data {
 void request::parseRequestBody(const std::string &body) {
     auto map = splitBodyParams(body);
 
-    for (const auto&[key, value] : map) {
-        req_header_.req_data.emplace_back(request_data{key, value});
+    if (!map.empty()){
+        for (const auto&[key, value] : map) {
+            req_header_.req_data.emplace_back(request_data{key, value});
+        }
     }
 }
 
@@ -86,6 +88,11 @@ request::splitBodyParams(const std::string &body) {
             token += body[i];
         }
     }
+
+    auto finalPair = split(token);
+    output.emplace(finalPair.first, finalPair.second);
+
+    return output;
 }
 
 

@@ -170,11 +170,11 @@ std::string response::handle_post_request(request &req) {
 
     ptree root;
 
-    auto username = req.header().req_data.at(0).value;
+    auto email = req.header().req_data.at(0).value;
     auto first_name = req.header().req_data.at(1).value;
     auto last_name = req.header().req_data.at(2).value;
-    auto email = req.header().req_data.at(3).value;
-    auto password = req.header().req_data.at(4).value;
+    auto password = req.header().req_data.at(3).value;
+    auto username = req.header().req_data.at(4).value;
 
     std::string url_encoded_data = "username=" + username + "&first_name=" + first_name +
                                    "&last_name=" + last_name + "&email=" + email + "&password=" + password;

@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/glasser/toys/asioserver/CppServer/core/app.cpp" "/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/core/app.cpp.o"
-  "/home/glasser/toys/asioserver/CppServer/core/math.cpp" "/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/core/math.cpp.o"
-  "/home/glasser/toys/asioserver/CppServer/servers/http_server/connection.cpp" "/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.o"
-  "/home/glasser/toys/asioserver/CppServer/servers/http_server/http_server.cpp" "/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.o"
-  "/home/glasser/toys/asioserver/CppServer/servers/http_server/request.cpp" "/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.o"
-  "/home/glasser/toys/asioserver/CppServer/servers/http_server/response.cpp" "/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.o"
-  "/home/glasser/toys/asioserver/main.cpp" "/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/asioserver.dir/main.cpp.o"
+  "/home/glasser/toys/asio-server/CppServer/core/app.cpp" "/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/core/app.cpp.o"
+  "/home/glasser/toys/asio-server/CppServer/core/math.cpp" "/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/core/math.cpp.o"
+  "/home/glasser/toys/asio-server/CppServer/servers/http_server/connection.cpp" "/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/servers/http_server/connection.cpp.o"
+  "/home/glasser/toys/asio-server/CppServer/servers/http_server/http_server.cpp" "/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/servers/http_server/http_server.cpp.o"
+  "/home/glasser/toys/asio-server/CppServer/servers/http_server/request.cpp" "/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/servers/http_server/request.cpp.o"
+  "/home/glasser/toys/asio-server/CppServer/servers/http_server/response.cpp" "/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles/asioserver.dir/CppServer/servers/http_server/response.cpp.o"
+  "/home/glasser/toys/asio-server/main.cpp" "/home/glasser/toys/asio-server/cmake-build-debug/CMakeFiles/asioserver.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
