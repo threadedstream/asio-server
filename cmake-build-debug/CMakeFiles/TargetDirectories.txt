@@ -1,0 +1,3 @@
+/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/glasser/toys/asioserver/cmake-build-debug/CMakeFiles/asioserver.dir

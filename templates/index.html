@@ -1,0 +1,32 @@
+﻿<html>
+    <head>
+    	<link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+    	<form id="auth">
+    		<input type="text" id="login" >
+			<input type="password" id="password">
+			<br>
+    		<button style="position: relative; top:20px;" type="submit">Authorize</button>
+    	</form>
+
+    	<script>
+    		const form = document.getElementById("auth");
+			form.addEventListener('submit', (e) => {
+				e.preventDefault();
+				const login = document.getElementById('login');
+				const password = document.getElementById('password');
+				var data = "login="+login+"&"+"password="+password;
+				const http = new XMLHttpRequest();
+				const url = "http://127.0.0.1/db" + data
+				http.open();
+				http.send();
+				http.onreadystatechange=function(){
+					if (this.status === 200){
+						form.reset;
+					}
+				}
+			})	
+    	</script>
+    </body>
+</html>

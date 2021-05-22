@@ -1,0 +1,4 @@
+/snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/glasser/toys/asioserver
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/glasser/toys/asioserver/cmake-build-debug
