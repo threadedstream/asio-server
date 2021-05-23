@@ -13,7 +13,7 @@ http_server::http_server(ui32 backlog, ui32 thread_pool_size) :
 
 
 void http_server::run() {
-    std::vector <thread_ptr> threads;
+    std::vector<thread_ptr> threads;
     for (size_t i = 0; i < thread_pool_size_; ++i) {
 
         thread_ptr thread(new boost::thread(
@@ -28,10 +28,8 @@ void http_server::run() {
 }
 
 void http_server::process() {
-    Logger::log(SEVERITY::DEBUG, "Preparing mandatory resources...\n");
-    Logger::log(SEVERITY::DEBUG, std::to_string(endpoint_.port()) + "\n");
+    std::cout << "PID: " << getpid() << "\n";
     acc_.open(endpoint_.protocol());
-    Logger::log(SEVERITY::DEBUG, "Connection is opened\n");
     errc err;
     acc_.bind(endpoint_, err);
     acc_.set_option(acceptor::reuse_address(true));
@@ -40,12 +38,15 @@ void http_server::process() {
         exit(-1);
     }
 
-    signals_.add(SIGINT);
+    try {
+        signals_.add(SIGKILL);
+    } catch (const std::exception &ex) {
+        std::cout << ex.what();
+    }
     signals_.add(SIGTERM);
-#if defined(SIGQUIT)
-    signals_.add(SIGQUIT);
-#endif
-    signals_.async_wait(boost::bind(&http_server::handle_stop, this));
+    signals_.async_wait([this](boost::system::error_code err_code, int signal) -> void {
+        http_server::handleSignal(err_code, signal);
+    });
 
     acc_.set_option(ip::tcp::acceptor::reuse_address(true), err);
     if (err) {
@@ -61,8 +62,9 @@ void http_server::process() {
 
 void http_server::accept() {
     conn_.reset(new connection(context_));
-    acc_.async_accept(conn_->socket(), boost::bind(&http_server::accept_handler, this,
-                                                   placeholders::error));
+    acc_.async_accept(conn_->socket(), [this](const boost::system::error_code& err_code) -> void {
+        http_server::accept_handler(err_code);
+    });
 }
 
 void http_server::accept_handler(const errc &err) {
@@ -72,7 +74,14 @@ void http_server::accept_handler(const errc &err) {
     accept();
 }
 
-void http_server::handle_stop() {
+void http_server::handleSignal(boost::system::error_code err_code, int signal) {
+    conn_->closeConnection();
+    acc_.close();
+    context_.stop();
+}
+
+void http_server::dispose(int signum) {
+    conn_->closeConnection();
     acc_.close();
     context_.stop();
 }

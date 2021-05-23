@@ -4,18 +4,18 @@
 #include "connection.hpp"
 #include "settings.hpp"
 
-	
 class http_server : public base_connection
 {
 public:
 	explicit http_server(ui32 backlog, ui32 thread_pool_size);
 	void run();
+    void dispose(int signum);
 
 private:
 	void accept();
 	void process();
 	void accept_handler(const errc& err);
-	void handle_stop();
+	void handleSignal(boost::system::error_code err_code, int signal);
 
 private:
 	asio_ctx context_{ 1 };

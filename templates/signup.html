@@ -16,7 +16,7 @@
             <input type="text" id="email" style="position:relative; top:60px; left: 25px;">
             <br>
             <a style="position:relative; top:80px;">Password</a>
-            <input type="text" id="password" style="position:relative; top:80px;">
+            <input type="password" id="password" style="position:relative; top:80px;">
             <br>
             <button style="position:relative; top:100px;"type="submit">Sign Up</button>
             <br>
@@ -43,6 +43,7 @@
                     if (this.status === 200){
                         foo.reset();
                     }else{
+                        console.log(this.responseText)
                         alert('response from server is not positive');
                     }
                 }                
