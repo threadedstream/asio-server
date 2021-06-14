@@ -52,7 +52,8 @@ private:
 	std::string template_dir_;
 	std::string static_dir_;
 	streambuf resp;
+    math math_module;
 
-	//std::vector<const_buffer> to_buffers();
+    //std::vector<const_buffer> to_buffers();
 	//static response stock_response(status_code status);
 };

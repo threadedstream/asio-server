@@ -1,4 +1,5 @@
 #include "math.hpp"
+#include <boost/algorithm/string.hpp>
 
 math::math() {
     operators = {"+", "-", "/", "*", "^"};
@@ -72,6 +73,64 @@ math &math::shuntingYard(const std::string &input) {
 
 }
 
+
+float math::dot(const std::string &vec1, const std::string &vec2) {
+    float dotResult{0.0f};
+
+    std::vector<std::string> vectorStr1, vectorStr2;
+    std::vector<float> vector1, vector2;
+
+    boost::split(vectorStr1, vec1, [](char c) { return c == ','; });
+    boost::split(vectorStr2, vec2, [](char c) { return c == ','; });
+
+    for (const auto &el : vectorStr1) {
+        vector1.push_back(std::atof(el.c_str()));
+    }
+
+    for (const auto &el : vectorStr2) {
+        vector2.push_back(std::atof(el.c_str()));
+    }
+
+
+    for (int idx = 0; idx < vector1.size(); ++idx){
+        dotResult += (vector1[idx] * vector2[idx]);
+    }
+
+    return dotResult;
+}
+
+std::string math::cross(const std::string& vec1, const std::string& vec2){
+    float x{0.0f}, y{0.0f}, z{0.0f};
+
+    std::vector<std::string> vectorStr1, vectorStr2;
+    std::vector<float> vector1, vector2;
+
+    boost::split(vectorStr1, vec1, [](char c) { return c == ','; });
+    boost::split(vectorStr2, vec2, [](char c) { return c == ','; });
+
+    for (const auto &el : vectorStr1) {
+        vector1.push_back(std::atof(el.c_str()));
+    }
+
+    for (const auto &el : vectorStr2) {
+        vector2.push_back(std::atof(el.c_str()));
+    }
+
+    /*
+        x   xp
+        y   yp
+        z   zp
+        x   xp
+        y   yp
+        z   zp
+    */
+
+    x = (vector1[1] * vector2[2]) - (vector2[1] * vector1[2]);
+    y = (vector1[2] * vector2[0]) - (vector2[2] * vector1[0]);
+    z = (vector1[0] * vector2[1]) - (vector2[0] * vector1[1]);
+
+    return "[" + std::to_string(x) + " " + std::to_string(y) + " " + std::to_string(z) + "]";
+}
 
 // Terribly unoptimized code
 float math::evaluatePostfix() {

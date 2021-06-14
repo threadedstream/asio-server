@@ -14,5 +14,4 @@ public:
 
 private:
     http_server server_http_;
-
 };

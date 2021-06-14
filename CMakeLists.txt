@@ -3,6 +3,7 @@ project(asioserver)
 
 set(CMAKE_CXX_STANDARD 17)
 set(THREADS_PREFER_PTHREAD_FLAG ON)
+set(CMAKE_CXX_FLAGS "-O3 -g")
 
 find_package(Threads REQUIRED)
 find_package(Boost COMPONENTS thread REQUIRED)

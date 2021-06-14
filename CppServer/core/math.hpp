@@ -14,6 +14,9 @@ public:
     math &
     shuntingYard(const std::string &input);
 
+    float dot(const std::string& vec1, const std::string& vec2);
+    std::string cross(const std::string& vec1, const std::string& vec2);
+
     math();
 
     float evaluatePostfix();

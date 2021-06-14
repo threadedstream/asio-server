@@ -26,24 +26,24 @@ namespace responses {
 }
 
 std::string response::handle_math(request &req) {
-    auto op = req.header().req_data.at(1).value;
-    math math;
+    auto op = req.header().req_data.at(0).value;
 
     if (op == "arithmetic") {
         auto expression = req.header().req_data.at(0).value;
-        return std::to_string(math.shuntingYard(expression).evaluatePostfix());
-    } else if (op == "diff") {
-        float at;
-        auto func = req.header().req_data.at(1).value;
-        try {
-            at = atoi(req.header().req_data.at(2).value.c_str());
-        }
-        catch (const std::exception &ex) {
-            std::cerr << ex.what() << "\n";
-        }
+        return std::to_string(math_module.shuntingYard(expression).evaluatePostfix());
+    } else if (op == "dot") {
+        std::string vec1 = req.header().req_data.at(1).value;
+        std::string vec2 = req.header().req_data.at(2).value;
 
-        std::string buf;
-        return buf;
+        auto dotResult = std::to_string(math_module.dot(vec1, vec2));
+
+        return dotResult;
+    } else if (op == "cross") {
+        std::string vec1 = req.header().req_data.at(1).value;
+        std::string vec2 = req.header().req_data.at(2).value;
+
+        auto crossResult = math_module.cross(vec1, vec2);
+        return crossResult;
     } else {
         std::string buf = "Unknown operation" + op;
         return buf;
@@ -59,7 +59,7 @@ std::string response::buildResponse(request &req) {
         buf = responses::code_to_html(status_code::bad_request);
     }
     return buf;
-                   }
+}
 
 
 std::string response::load_template_file(request &req) {

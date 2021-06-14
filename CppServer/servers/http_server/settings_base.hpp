@@ -42,7 +42,7 @@ private:
         It is also compulsory to alter path style from \\ to /, since __FILE__ returns
         path in former format.
     */
-    inline std::string parent(const std::string &file_path) {
+    std::string parent(const std::string &file_path) {
         auto endIdx = file_path.size() - 1;
         auto cutIdx = -1;
 
