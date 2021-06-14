@@ -31,9 +31,7 @@ std::string response::handle_math(request &req) {
 
     if (op == "arithmetic") {
         auto expression = req.header().req_data.at(0).value;
-
-        std::string buf = std::to_string(math.shuntingYard(expression).evaluatePostfix());
-        return buf;
+        return std::to_string(math.shuntingYard(expression).evaluatePostfix());
     } else if (op == "diff") {
         float at;
         auto func = req.header().req_data.at(1).value;
@@ -61,7 +59,7 @@ std::string response::buildResponse(request &req) {
         buf = responses::code_to_html(status_code::bad_request);
     }
     return buf;
-}
+                   }
 
 
 std::string response::load_template_file(request &req) {
@@ -74,17 +72,18 @@ std::string response::load_template_file(request &req) {
             //Arithmetic dedicated page
             return handle_math(req);
         } else {
-            err_code err; std::string response;
-            response::handle_post_request(req, err);
+            err_code err;
+            std::string response;
+            auto respstr = response::handle_post_request(req, err);
 
-            if (err.cause.empty()){
+            if (err.cause.empty()) {
                 response = "HTTP/1.1 200 OK\r\n";
                 response += "Content-Type: text/html, application/x-www-form-urlencoded\r\n";
-                response += "Connection: Keep-Alive\r\n";
-            }else{
+                response += "Connection: Keep-Alive\r\n\r\n";
+            } else {
                 response = "HTTP/1.1 500 Internal Server Error\r\n";
                 response += "Content-Type: text/html, application/x-www-form-urlencoded\r\n";
-                response += "Connection: Keep-Alive\r\n";
+                response += "Connection: Keep-Alive\r\n\r\n";
             }
             return response;
         }
@@ -127,10 +126,12 @@ std::string response::retrieve_user_data(request &req) {
     //request_stream << json;
     asio_ctx ctx;
     sock_ptr_t sock_ = boost::make_shared<sock_t>(ctx);
+
     try {
         sock_->connect(db_endp);
     }
-    catch (const boost::system::system_error& er) {
+
+    catch (const boost::system::system_error &er) {
         Logger::log(SEVERITY::ERR, er.what());
         return "<h1>Unable to connect to a database server</h1>";
     }
@@ -163,7 +164,7 @@ void response::make_clean(std::string &text) {
     text.erase(last + 1, text.length() - 1);
 }
 
-void response::handle_post_request(request &req, err_code &err) {
+std::string response::handle_post_request(request &req, err_code &err) {
     std::string host = "127.0.0.1";
     auto port = 5600;
     endp_obj db_server(ADDR_FROM_STR(host), port);
@@ -197,11 +198,16 @@ void response::handle_post_request(request &req, err_code &err) {
     request_buffer += "Connection: close\r\n\r\n";
     request_buffer += url_encoded_data;
 
-    sync_client{ sock_, request_buffer }(err);
-    if (!err.cause.empty()) {
+    sync_client cl{sock_, request_buffer};
+    cl(err);
+    auto hdpair = utils::split_response(cl.respstr);
+    auto pretty = utils::prettify_json((hdpair.second));
+    if (err.cause.empty()) {
+        return pretty;
+    } else {
         Logger::log(SEVERITY::ERR, err.cause);
         sock_->close();
-        return;
+        return "";
     }
 
     sock_->close();

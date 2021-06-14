@@ -34,6 +34,7 @@ private:
         std::regex numRegex("^\\d+$");
         return std::regex_match(tok, numRegex);
     }
+
     __attribute__((always_inline)) bool
     isFunction(const std::string &tok){
         return std::find(functions.begin(), functions.end(), tok) != functions.end();

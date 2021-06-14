@@ -11,8 +11,6 @@
 #define FILENAME_DEMO "F:/demo.cpp"
 #define FILENAME "index.html"
 #define TEMPLATE_DIR ".\\templates"
-#define DBLOGFILE "F:/cppserver/CppServer/dblog.txt"
-
 class connection :
         public boost::enable_shared_from_this<connection>,
         private non_copyable {
@@ -37,3 +35,5 @@ private:
         return (stat(filename.c_str(), &buffer) == 0);
     }
 };
+
+#define DBLOGFILE "F:/cppserver/CppServer/dblog.txt"

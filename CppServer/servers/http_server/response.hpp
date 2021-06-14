@@ -35,7 +35,7 @@ public:
 	inline void set_static_dir(const std::string& static_dir) noexcept { static_dir_ = static_dir; }
 	inline void set_template_dir(const std::string& template_dir) noexcept { template_dir_ = template_dir; }
 	std::string handle_math(request& req);
-	void handle_post_request(request& req, err_code& err);
+	std::string handle_post_request(request& req, err_code& err);
 	void connect_handler(const errc & err_conn);
 	void read_handler(const errc& err, size_t bytes);
 	void write_handler(const errc& err, size_t bytes);

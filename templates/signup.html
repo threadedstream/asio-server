@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-        <form id="signup" method="POST">
-            <a style="position:relative; top:10px;">Username</a>
-            <input type="text" id="username" style="position:relative; top:10px;">
-            <br>
-            <a style="position:relative; top:20px;">First name</a>
-            <input type="text" id="first_name" style="position:relative; top:20px;">
-            <br>
-            <a style="position:relative; top:40px;">Last name</a>
-            <input type="text" id="last_name" style="position:relative; top:40px;">
-            <br>
-            <a style="position:relative; top:60px;">Email</a>
-            <input type="text" id="email" style="position:relative; top:60px; left: 25px;">
-            <br>
-            <a style="position:relative; top:80px;">Password</a>
-            <input type="password" id="password" style="position:relative; top:80px;">
-            <br>
-            <button style="position:relative; top:100px;"type="submit">Sign Up</button>
-            <br>
-        </form>
+<head></head>
+<body>
+<form id="signup" method="POST">
+    <a style="position:relative; top:10px;">Username</a>
+    <input type="text" id="username" style="position:relative; top:10px;">
+    <br>
+    <a style="position:relative; top:20px;">First name</a>
+    <input type="text" id="first_name" style="position:relative; top:20px;">
+    <br>
+    <a style="position:relative; top:40px;">Last name</a>
+    <input type="text" id="last_name" style="position:relative; top:40px;">
+    <br>
+    <a style="position:relative; top:60px;">Email</a>
+    <input type="text" id="email" style="position:relative; top:60px; left: 25px;">
+    <br>
+    <a style="position:relative; top:80px;">Password</a>
+    <input type="password" id="password" style="position:relative; top:80px;">
+    <br>
+    <button style="position:relative; top:100px;" type="submit">Sign Up</button>
+    <br>
+</form>
 
-        <script>
-            const foo = document.getElementById('signup');
-            foo.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const username   = document.getElementById('username').value;
-                const first_name = document.getElementById('first_name').value;
-                const last_name  = document.getElementById('last_name').value;
-                const email      = document.getElementById('email').value;
-                const password   = document.getElementById('password').value;
-                var data = "username="+username + "&first_name=" + first_name + "&last_name=" + last_name + 
-                            "&email=" + email + "&password=" + password;
-                const method = "POST";
-                const http = new XMLHttpRequest();
-                const url =  "http://127.0.0.1/signup";
-                http.open(method, url);
-                http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
-                http.send(data);
-                http.onreadystatechange=function(){
-                    if (this.status === 200){
-                        foo.reset();
-                    }else{
-                        console.log(this.responseText)
-                        alert('response from server is not positive');
-                    }
-                }                
-            })
-        </script>
-    </body>
+<script>
+    const foo = document.getElementById('signup');
+    foo.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const username = document.getElementById('username').value;
+        const first_name = document.getElementById('first_name').value;
+        const last_name = document.getElementById('last_name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        var data = "username=" + username + "&first_name=" + first_name + "&last_name=" + last_name +
+            "&email=" + email + "&password=" + password;
+        const method = "POST";
+        const http = new XMLHttpRequest();
+        const url = "http://127.0.0.1/signup";
+        http.open(method, url, true);
+        http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+        http.send(data);
+
+        http.onreadystatechange = function () {
+            if (this.status === 200) {
+                foo.reset();
+            } else {
+                console.log(this.responseText)
+                alert('response from server is not positive');
+            }
+        }
+    })
+</script>
+</body>
 </html>
